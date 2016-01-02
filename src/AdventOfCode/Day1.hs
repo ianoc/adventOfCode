@@ -3,15 +3,6 @@ module AdventOfCode.Day1 (
     ,indexTillFloor
     ) where
 
-import Data.List(nub)
-
-data HistoryUrl = HistoryUrl String deriving (Show, Eq, Ord)
-
-data AppUrl = AppUrl String deriving (Show, Eq, Ord)
-
-data Server = Server { serverName :: String, appUrl :: AppUrl, historyUrl :: HistoryUrl } deriving (Show, Eq, Ord)
-
-
 whichFloor :: String -> Int
 whichFloor input = fFloor 0 input
   where
