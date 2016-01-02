@@ -3,13 +3,8 @@ module AdventOfCode.Command.Day1 (
 ) where
 
 import AdventOfCode
-import Data.Maybe(fromMaybe)
 import Options.Applicative
 import AdventOfCode.Command.Utils
-import Data.List(intercalate)
-import Control.Monad.Reader
-import Control.Monad
-import Options.Applicative.Types
 import AdventOfCode.Day1(whichFloor, indexTillFloor)
 
 data Day1Args = Day1Args { findFloor :: Maybe Int

@@ -10,13 +10,8 @@ module AdventOfCode (
     err,
     ) where
 
-import Data.List.Split(splitOn)
-import Data.Text(unpack)
 import Data.Typeable
 import Options.Applicative
-import Filesystem.Path(parent)
-import qualified Turtle as T
-import qualified Data.Map.Strict as Map
 import Control.Exception
 
 data FailOnLeftException = FailOnLeftException String deriving (Show, Typeable)

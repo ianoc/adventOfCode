@@ -6,8 +6,6 @@ module AdventOfCode.Command.Utils (
 ) where
 
 import Data.List(intercalate, transpose)
-import AdventOfCode
-import qualified Data.Int as Ints
 import qualified Data.Text as Text
 import qualified Turtle as T
 import qualified System.IO as IO
