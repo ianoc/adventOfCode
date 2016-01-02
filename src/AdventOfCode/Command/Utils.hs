@@ -10,6 +10,8 @@ import AdventOfCode
 import qualified Data.Int as Ints
 import qualified Data.Text as Text
 import qualified Turtle as T
+import qualified System.IO as IO
+import Control.DeepSeq
 
 tabColumnarize :: [[String]] -> [String]
 tabColumnarize = map (intercalate "\t")
@@ -34,8 +36,8 @@ evenColumnarize rows = let
 
 
 
-mergeUntilNothing :: (() -> IO (Maybe String)) -> IO [String]
-mergeUntilNothing fn = do
+mergeUntilTwoBlankLines :: (() -> IO (Maybe String)) -> IO [String]
+mergeUntilTwoBlankLines fn = do
     rd <- fn ()
     processFunc [] rd
   where processFunc ("" : existing) (Just "") = return existing
@@ -45,7 +47,11 @@ mergeUntilNothing fn = do
         processFunc existing Nothing = return existing
 
 readInput :: IO [String]
-readInput = mergeUntilNothing (\_ -> readFn)
+readInput = do
+    IO.hSetBuffering IO.stdin IO.NoBuffering
+    res <- mergeUntilTwoBlankLines (\_ -> readFn)
+    res `deepseq` IO.hSetBuffering IO.stdin IO.LineBuffering
+    return res
   where readFn = do
           readLineMaybe <- T.readline
           return $ fmap Text.unpack readLineMaybe

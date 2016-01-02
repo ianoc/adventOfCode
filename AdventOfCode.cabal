@@ -29,6 +29,7 @@ Library
         , turtle
         , containers >= 0.5.6
         , attoparsec
+        , deepseq
     Exposed-Modules:
         AdventOfCode
       , AdventOfCode.Command.All
