@@ -30,6 +30,7 @@ Library
         , containers >= 0.5.6
         , attoparsec
         , deepseq
+        , cryptohash
     Exposed-Modules:
         AdventOfCode
       , AdventOfCode.Command.All
@@ -38,9 +39,11 @@ Library
       , AdventOfCode.Command.Day1
       , AdventOfCode.Command.Day2
       , AdventOfCode.Command.Day3
+      , AdventOfCode.Command.Day4
       , AdventOfCode.Day1
       , AdventOfCode.Day2
       , AdventOfCode.Day3
+      , AdventOfCode.Day4
     GHC-Options: -O2 -Wall
     Default-Language: Haskell2010
 
