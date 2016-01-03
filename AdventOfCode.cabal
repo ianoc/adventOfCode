@@ -37,8 +37,10 @@ Library
         AdventOfCode.Command.Utils
       , AdventOfCode.Command.Day1
       , AdventOfCode.Command.Day2
+      , AdventOfCode.Command.Day3
       , AdventOfCode.Day1
       , AdventOfCode.Day2
+      , AdventOfCode.Day3
     GHC-Options: -O2 -Wall
     Default-Language: Haskell2010
 
