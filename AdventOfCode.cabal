@@ -41,11 +41,13 @@ Library
       , AdventOfCode.Command.Day3
       , AdventOfCode.Command.Day4
       , AdventOfCode.Command.Day5
+      , AdventOfCode.Command.Day6
       , AdventOfCode.Day1
       , AdventOfCode.Day2
       , AdventOfCode.Day3
       , AdventOfCode.Day4
       , AdventOfCode.Day5
+      , AdventOfCode.Day6
     GHC-Options: -O2 -Wall
     Default-Language: Haskell2010
 
